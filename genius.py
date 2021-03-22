@@ -5,7 +5,7 @@ os.system('cls')
 
 lvl = int
 ans = ""
-l = []
+l = str
 lvl = int(input("Selecione o número de fases >> "))
 os.system('cls')
 
@@ -38,9 +38,7 @@ os.system('cls')
 while round < lvl:
     ans = ""
     n = random.randint(0,9)
-    l += n
     n2 = str(n)
-    for
     print("[[ " + n2 + " ]]")
     time.sleep(dif)
     os.system('cls')
