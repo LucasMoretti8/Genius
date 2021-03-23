@@ -1,7 +1,8 @@
 import random, time, sys, os
 stream = sys.stdout
 
-os.system('cls' if os.name == 'nt' else 'clear')
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 lvl = int
 ans = ""
@@ -21,19 +22,19 @@ elif dif == 3:
 round = 0
 turn = ""
 
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 print("Começando em 3...")
 time.sleep(1)
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 print("Começando em 3...2...")
 time.sleep(1)
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 print("Começando em 3...2...1...")
 time.sleep(1)
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 print("Começando em 3...2...1... JÁ!!")
 time.sleep(1)
-os.system('cls' if os.name == 'nt' else 'clear')
+clear()
 
 resultList = [] # Imprimir resultado por round
 while round < lvl:
@@ -51,7 +52,7 @@ while round < lvl:
     #print("Input: ", ans)
     if ans == turn:
         round += 1
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear()
     else:
         print("GAME OVER!!")
         print("Gabarito: ", turn)
