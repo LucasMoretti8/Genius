@@ -1,4 +1,4 @@
-import random, time, sys, os
+import random, time, sys, os, winsound
 stream = sys.stdout
 
 def clear():
@@ -7,6 +7,13 @@ def clear():
 lvl = int
 ans = ""
 l = str
+clear()
+
+frequency = 2500  # Set Frequency To 2500 Hertz
+duration = 100  # Set Duration To 1000 ms == 1 second
+def beep(duration=100):
+    winsound.Beep(frequency, duration)
+
 lvl = int(input("Selecione o número de fases >> "))
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -24,15 +31,19 @@ turn = ""
 
 clear()
 print("Começando em 3...")
+beep()
 time.sleep(1)
 clear()
 print("Começando em 3...2...")
+beep()
 time.sleep(1)
 clear()
 print("Começando em 3...2...1...")
+beep()
 time.sleep(1)
 clear()
 print("Começando em 3...2...1... JÁ!!")
+beep(500)
 time.sleep(1)
 clear()
 
@@ -43,9 +54,15 @@ while round < lvl:
     n2 = str(n)
     resultList.append(n2) # Inclui o valor n2 dentro de uma lista
     # print("[[ " + n2 + " ]]")
-    print(*resultList) # Imprime o resultado
-    time.sleep(dif)
-    os.system('cls' if os.name == 'nt' else 'clear')
+    #print(*resultList) # Imprime o resultado
+
+    for x in range(len(resultList)):
+        print("[[ " + resultList[x] + " ]]")
+        beep()
+        time.sleep(dif)
+        clear()
+
+    clear()
     ans = input(" >> >> >> ")
     turn += n2
     #print ("Gabarito: ", turn)
@@ -59,5 +76,17 @@ while round < lvl:
         print("Input: ", ans)
         quit()
 print("PARABÉNS!!!")
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
+beep(80)
 print ("Gabarito: ", turn)
 print("Input: ", ans)
